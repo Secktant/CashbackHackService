@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
-    @Test
+    @org.testng.annotations.Test
     public void shouldMissingOne() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
@@ -14,7 +14,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldThousandAreMissing() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(0);
@@ -23,7 +23,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void negativeValue() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         assertThrows(RuntimeException.class, () -> {
@@ -32,7 +32,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void oneOutOfAThousand() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(999);
@@ -41,7 +41,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void shouldThousand() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(1000);
