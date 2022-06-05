@@ -1,11 +1,13 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+//import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
-    @Test
+    @org.junit.Test
     public void shouldMissingOne() {
         CashbackHackService cashbackHackService = new CashbackHackService();
 
@@ -14,7 +16,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.junit.Test
     public void shouldThousandAreMissing() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(0);
@@ -23,7 +25,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.junit.Test
     public void negativeValue() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         assertThrows(RuntimeException.class, () -> {
@@ -32,7 +34,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.junit.Test
     public void oneOutOfAThousand() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(999);
@@ -41,7 +43,7 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Test
+    @org.junit.Test
     public void shouldThousand() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int actual = cashbackHackService.remain(1000);
